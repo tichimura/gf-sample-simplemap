@@ -46,15 +46,11 @@ public class Main {
 	 * @throws FunctionDomainException 
 	 */
 	public static void main(String[] args) throws FunctionDomainException, TypeMismatchException, NameResolutionException, QueryInvocationTargetException {
-//		ApplicationContext context= new ClassPathXmlApplicationContext("META-INF/spring/gemfire/cache-config.xml");
 		ApplicationContext context= new ClassPathXmlApplicationContext("META-INF/spring/gemfire/cache-config.xml");
 		@SuppressWarnings("unchecked")
-//		Region<Object,Object> region = context.getBean("myRegion",Region.class);
-		
+//		Region<Object,Object> region = context.getBean("myRegion",Region.class);		
 //		Region<Object, ArrayList<String>> region = context.getBean("myRegion", Region.class);
 
-		
-		
 		Region<Object, HashMap<Object, Object>> region = context.getBean("myRegion", Region.class);
 		
 		log.debug("populating region ...");
